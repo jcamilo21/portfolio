@@ -15,7 +15,7 @@ export function Footer() {
           </div>
 
           <div className="flex gap-4">
-            {socials.map((social, index) => {
+            {socials.map((social) => {
               const Icon = social.icon;
               return (
                 <a
