@@ -18,10 +18,10 @@ export function AboutSection() {
       <div className="absolute bottom-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-[var(--color-surface)]/20 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <div className="flex justify-center mb-20 text-center group">
-        <h3 className="text-[var(--color-text)] text-5xl sm:text-6xl font-black tracking-tight opacity-90 rotate-4 group-hover:rotate-0 transition-transform duration-300">
+        <h3 className="text-[var(--color-text)] text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight opacity-90 rotate-4 group-hover:rotate-0 transition-transform duration-300">
           SOBRE
         </h3>
-        <h3 className="text-[var(--color-accent)] text-5xl sm:text-6xl font-black tracking-tight -rotate-2 group-hover:rotate-0 transition-transform duration-300 ml-4 lg:ml-6">
+        <h3 className="text-[var(--color-accent)] text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight -rotate-2 group-hover:rotate-0 transition-transform duration-300 ml-3 sm:ml-4 lg:ml-6">
           MÍ
         </h3>
       </div>
@@ -66,8 +66,8 @@ export function AboutSection() {
           </div>
         </div>
 
-        <div ref={chartRef} className="relative h-96 w-full flex items-center justify-center py-6 sm:pl-10">
-          <div className="relative w-full max-w-md h-full mx-auto hidden sm:block">
+        <div ref={chartRef} className="relative h-[300px] sm:h-96 w-full flex items-center justify-center py-6 sm:pl-10">
+          <div className="relative w-full max-w-[280px] sm:max-w-md h-full mx-auto">
             {/* la linea esa que conecta todo el chart, usamos strokeDash para darle un efectis ligero de ser dibujado */}
             <svg className="absolute inset-0 w-full h-full overflow-visible pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
               <path 
@@ -87,21 +87,6 @@ export function AboutSection() {
                 isChartVisible={isChartVisible}
               />
             ))}
-          </div>
-          
-          <div className={`sm:hidden flex flex-col space-y-6 w-full px-4 transition-all duration-1000 pt-8 ${isChartVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-             {chartNodesData.map((node) => (
-               <div key={node.id} className="relative p-6 rounded-2xl bg-[var(--color-primary)]/95 backdrop-blur-xl border border-[var(--color-accent)]/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-hidden">
-                 <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-accent)]/10"></div>
-                 <h6 className="text-[var(--color-accent)] text-[10px] font-bold tracking-[0.2em] uppercase mb-1">{node.subtitle}</h6>
-                 <h5 className="text-base font-bold text-[var(--color-text)] mb-3 drop-shadow-sm">
-                   {node.title.replace('<br/>', ' ')}
-                 </h5>
-                 <p className="text-[var(--color-text)]/80 text-sm leading-relaxed font-medium">
-                    {node.description}
-                 </p>
-               </div>
-             ))}
           </div>
         </div>
       </div>

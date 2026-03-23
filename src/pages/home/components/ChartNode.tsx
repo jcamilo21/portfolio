@@ -52,7 +52,7 @@ export const ChartNode: React.FC<ChartNodeProps> = ({
 
         {/* Tooltip de la card */}
         <div
-          className={`absolute ${tooltipPositionClasses} p-5 rounded-2xl bg-[var(--color-primary)]/95 backdrop-blur-xl border border-[var(--color-accent)]/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none z-50 overflow-hidden`}
+          className={`absolute ${tooltipPositionClasses} p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-[var(--color-primary)]/95 backdrop-blur-xl border border-[var(--color-accent)]/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none z-50 overflow-hidden w-max max-w-[200px] sm:max-w-none`}
         >
           <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[var(--color-accent)] to-[var(--color-accent)]/10"></div>
           <h6 className="text-[var(--color-accent)] text-[10px] font-bold tracking-[0.2em] uppercase mb-1 text-left">

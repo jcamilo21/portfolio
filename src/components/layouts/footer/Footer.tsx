@@ -11,7 +11,7 @@ export function Footer() {
           
           <div className="text-center md:text-left">
             <p className="text-(--color-text) text-sm font-light">
-              © {currentYear} Jhonatan Camilo. Todos los derechos reservados.
+              © {currentYear} Jhonatan Camilo.
             </p>
           </div>
 

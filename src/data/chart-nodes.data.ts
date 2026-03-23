@@ -7,7 +7,7 @@ export const chartNodesData = [
     positionClasses: 'left-[10%] top-[90%] -translate-x-1/2 -translate-y-1/2',
     animationDelays: { pop: '0.2s, 0.7s', title: '0.5s' },
     titlePosition: 'top' as const,
-    tooltipPositionClasses: 'left-full ml-5 top-1/2 -translate-y-1/2 w-[280px] translate-x-3 group-hover:translate-x-0'
+    tooltipPositionClasses: 'left-full ml-3 sm:ml-5 top-1/2 -translate-y-1/2 w-[200px] sm:w-[280px] translate-x-3 group-hover:translate-x-0'
   },
   {
     id: 'code',
@@ -17,7 +17,7 @@ export const chartNodesData = [
     positionClasses: 'left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2',
     animationDelays: { pop: '0.8s, 1.3s', title: '1.1s' },
     titlePosition: 'bottom' as const,
-    tooltipPositionClasses: 'top-full mt-5 left-1/2 -translate-x-1/2 w-[280px] -translate-y-3 group-hover:translate-y-0'
+    tooltipPositionClasses: 'top-full mt-3 sm:mt-5 left-1/2 -translate-x-1/2 w-[200px] sm:w-[280px] -translate-y-3 group-hover:translate-y-0'
   },
   {
     id: 'perf',
@@ -28,6 +28,6 @@ export const chartNodesData = [
     animationDelays: { pop: '1.6s, 2.1s', title: '1.9s' },
     titlePosition: 'top' as const,
     titleWrapperClasses: '-right-30 text-right',
-    tooltipPositionClasses: 'right-full mr-5 top-1/2 -translate-y-1/2 w-[280px] -translate-x-3 group-hover:translate-x-0'
+    tooltipPositionClasses: 'right-full mr-3 sm:mr-5 top-1/2 -translate-y-1/2 w-[200px] sm:w-[280px] -translate-x-3 group-hover:translate-x-0'
   }
 ];
