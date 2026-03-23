@@ -26,7 +26,7 @@ export function HeroSection({ radius }: HeroSectionProps) {
           <div className="relative z-10">
             <div className="absolute inset-0 rounded-full bg-(--color-accent)/20 blur-2xl scale-110" />
             <div className="absolute inset-0 rounded-full border border-(--color-border)/30 scale-105" />
-            <img src={perfilImg} alt="Foto de perfil" className="relative object-cover w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full border-2 border-(--color-border) shadow-2xl" />
+            <img src={perfilImg} alt="Foto de perfil" fetchPriority="high" className="relative object-cover w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full border-2 border-(--color-border) shadow-2xl" />
           </div>
           {socials.map((s) => (
             <SocialIcon key={s.href} {...s} radius={radius} />

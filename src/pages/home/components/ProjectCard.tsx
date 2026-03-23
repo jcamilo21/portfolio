@@ -14,6 +14,8 @@ export function ProjectCard({ project: proj, index: i, isLast }: ProjectCardProp
           <img 
             src={proj.image} 
             alt={proj.title} 
+            loading="lazy"
+            decoding="async"
             className="w-full h-auto object-contain" 
           />
         </div>
