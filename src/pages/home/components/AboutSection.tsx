@@ -68,7 +68,7 @@ export function AboutSection() {
 
         <div ref={chartRef} className="relative h-[300px] sm:h-96 w-full flex items-center justify-center py-6 sm:pl-10">
           <div className="relative w-full max-w-[280px] sm:max-w-md h-full mx-auto">
-            {/* la linea esa que conecta todo el chart, usamos strokeDash para darle un efectis ligero de ser dibujado */}
+            {/* lLinea que conecta con el chart */}
             <svg className="absolute inset-0 w-full h-full overflow-visible pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
               <path 
                 d="M 10 90 C 30 90, 35 50, 50 50 C 65 50, 70 10, 90 10" 
@@ -91,7 +91,7 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* Tecnologías Dominadas - Carrusel Infinito Elegante */}
+      {/* Mi stack */}
       <div className="w-full mt-32 relative">
         <div className="flex flex-col items-center mb-16">
           <h4 className="text-sm font-bold tracking-[0.3em] text-[var(--color-text)]/50 uppercase mb-4 text-center">
@@ -128,7 +128,6 @@ export function AboutSection() {
                 className="mx-3 flex items-center gap-4 px-8 py-4 bg-[var(--color-text)]/[0.02] backdrop-blur-md border border-[var(--color-text)]/10 rounded-2xl shadow-[0_4px_20px_transparent] hover:shadow-[0_4px_20px_rgba(var(--color-accent),0.1)] hover:border-[var(--color-accent)]/30 hover:-translate-y-1 transition-all duration-300 group cursor-default"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-text)]/5 group-hover:bg-[var(--color-accent)]/10 transition-colors duration-300">
-                  {/* Forzamos currentColor como fallback por si era problema del fill nativo del SVG de PostgreSQL */}
                   <Tech.icon className="w-7 h-7 text-[var(--color-text)]/70 group-hover:text-[var(--color-accent)] transition-colors duration-300" style={{ fill: "currentColor" }} />
                 </div>
                 <span className="font-semibold text-lg text-[var(--color-text)]/70 group-hover:text-[var(--color-text)] tracking-wide transition-colors duration-300">
