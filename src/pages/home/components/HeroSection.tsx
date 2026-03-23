@@ -9,7 +9,7 @@ export function HeroSection({ radius }: HeroSectionProps) {
       <div className="flex flex-col items-center w-full md:w-1/2 ml-0 md:ml-[5%]">
         <h2 className="flex flex-col text-(--color-text) text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-4">
           <div className="flex">
-            <p className="bg-(--color-surface) p-2.5 rounded-xl relative -rotate-[15deg] right-12 text-(--color-text)">Hola,</p>
+            <p className="bg-(--color-surface) p-2.5 rounded-xl relative -rotate-[15deg] right-6 sm:right-12 text-(--color-text)">Hola,</p>
             <p className="flex items-center bg-(--color-accent) relative tracking-widest uppercase font-medium px-2 rounded-xl text-(--color-primary) rotate-[10deg]">soy</p>
           </div>
           <span className="text-(--color-accent)">Jhonatan Camilo</span>

@@ -15,7 +15,7 @@ export function Footer() {
             </p>
           </div>
 
-          <nav className="flex gap-6 md:gap-8">
+          <nav className="hidden sm:flex gap-6 md:gap-8">
             {navItems.map(item => (
               <NavLink 
                 key={item.to} 
