@@ -17,7 +17,7 @@ export function useHideOnScroll(threshold: number = 80) {
 
       setLastScrollY(currentScrollY);
     };
-
+    // Agregamos el event listener para el scroll
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, threshold]);
