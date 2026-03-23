@@ -18,7 +18,6 @@
     "@embedpdf/plugin-scroll": "^2.9.1",
     "@embedpdf/plugin-viewport": "^2.9.1",
     "@embedpdf/react-pdf-viewer": "^2.9.1",
-    "@fontsource-variable/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.2.1",
     "@thesvg/react": "^2.0.0",
     "react": "^19.2.4",
