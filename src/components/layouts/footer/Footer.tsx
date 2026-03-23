@@ -35,10 +35,10 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ backgroundColor: social.bg }}
-                  className="group p-2.5 rounded-lg border border-(--color-border)/30 transition-all duration-300 hover:scale-110"
+                  className="group p-2.5 rounded-lg border border-(--color-border)/30 hover:bg-(--color-accent) transition-all duration-300 hover:scale-110"
                   aria-label={`Link a perfil ${index + 1}`}
                 >
-                  <Icon className={`w-3 h-3 ${social.bg === 'var(--blue-950)' ? 'text-white' : 'text-(--color-text)'} group-hover:text-(--color-primary)`} />
+                  <Icon className={`w-3 h-3 ${social.bg === 'var(--blue-950)' ? 'text-white' : 'text-(--color-text)'} group-hover:text-white`} />
                 </a>
               );
             })}
