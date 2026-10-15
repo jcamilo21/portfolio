@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import { useThemeMode } from '../hooks/useThemeMode';
 
 type Theme = 'light' | 'dark';
@@ -8,22 +8,15 @@ interface ThemeContextType {
   toggleTheme: () => void;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+/* eslint-disable react-refresh/only-export-components */
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const { theme, toggleTheme, mounted } = useThemeMode();
+  const { theme, toggleTheme } = useThemeMode();
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {mounted && children}
+      {children}
     </ThemeContext.Provider>
   );
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme debe ser usado dentro de ThemeProvider');
-  }
-  return context;
 }
