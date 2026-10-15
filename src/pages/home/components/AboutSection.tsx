@@ -3,7 +3,6 @@ import { CVViewerModal } from '@components';
 import { chartNodesData, technologiesData } from '@data';
 import { ChartNode } from './ChartNode';
 import myCV from '../../../assets/documents/Jhonatan_Camilo_Cv.pdf';
-import '../styled-components/AboutSection.css';
 import { useIntersectionObserver } from '@hooks';
 
 export function AboutSection() {
