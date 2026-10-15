@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="25" fill="#1e293b"/>
+  <text x="25" y="55" font-family="'Courier New', monospace" font-size="24" fill="#60a5fa">&lt;dev&gt;</text>
+  <text x="50" y="130" font-family="'Courier New', monospace" font-size="70" font-weight="900" fill="#3b82f6">JC</text>
+  <text x="25" y="175" font-family="'Courier New', monospace" font-size="24" fill="#60a5fa">&lt;/dev&gt;</text>
+</svg>

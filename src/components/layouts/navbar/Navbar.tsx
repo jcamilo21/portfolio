@@ -12,9 +12,9 @@ export function Navbar() {
       }`}
     >
 
-      <span className="tracking-wide text-[var(--color-text)] font-light text-3xl md:text-4xl m-0 cursor-default">
-        Logo
-      </span>
+      <div className="flex items-center gap-2">
+        <img src="/logo.svg" alt="JC Logo" className="w-10 h-10" />
+      </div>
 
       <div className="flex gap-10 max-sm:hidden items-center">
         {navItems.map(item => (
