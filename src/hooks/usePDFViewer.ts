@@ -1,6 +1,7 @@
 import { useEffect, useState, type RefObject } from 'react';
+import type { PDFViewerRef } from '@embedpdf/react-pdf-viewer';
 
-export function usePDFViewer(viewerRef: RefObject<any>, theme: string) {
+export function usePDFViewer(viewerRef: RefObject<PDFViewerRef>, theme: string) {
   const [disabledCategories] = useState<string[]>(['annotation', 'redaction']);
 
   // Actualizar el tema dependiendo dek tema en mi portafolio
