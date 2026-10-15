@@ -143,4 +143,23 @@
   mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
+
+.tech-logo-adaptive {
+  color: var(--color-text);
+  opacity: 0.9;
+}
+
+.tech-logo-adaptive:hover,
+.group:hover .tech-logo-adaptive {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+[data-theme='dark'] .tech-logo-adaptive {
+  filter: brightness(1.2) contrast(0.9);
+}
+
+:root .tech-logo-adaptive {
+  filter: brightness(0.85) contrast(1.1);
+}
 }

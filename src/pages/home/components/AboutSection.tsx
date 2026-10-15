@@ -134,7 +134,10 @@ export function AboutSection() {
                 className="mx-3 flex items-center gap-4 px-8 py-4 bg-[var(--color-text)]/[0.02] backdrop-blur-md border border-[var(--color-text)]/10 rounded-2xl shadow-[0_4px_20px_transparent] hover:shadow-[0_4px_20px_rgba(var(--color-accent),0.1)] hover:border-[var(--color-accent)]/30 hover:-translate-y-1 transition-all duration-300 group cursor-default"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-accent)]/10 group-hover:bg-[var(--color-accent)]/20 transition-colors duration-300">
-                  <Tech.icon className="w-7 h-7 text-[var(--color-text)]/90 group-hover:text-[var(--color-accent)] transition-colors duration-300" style={{ fill: "currentColor" }} />
+                  <Tech.icon 
+                    className="w-7 h-7 transition-all duration-300 tech-logo-adaptive" 
+                    style={{ fill: "currentColor" }} 
+                  />
                 </div>
                 <span className="font-semibold text-lg text-[var(--color-text)]/90 group-hover:text-[var(--color-text)] tracking-wide transition-colors duration-300">
                   {Tech.name}
@@ -151,7 +154,10 @@ export function AboutSection() {
                 className="mx-3 flex items-center gap-4 px-8 py-4 bg-[var(--color-text)]/[0.02] backdrop-blur-md border border-[var(--color-text)]/10 rounded-2xl shadow-[0_4px_20px_transparent] hover:shadow-[0_4px_20px_rgba(var(--color-accent),0.1)] hover:border-[var(--color-accent)]/30 hover:-translate-y-1 transition-all duration-300 group cursor-default"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--color-text)]/5 group-hover:bg-[var(--color-accent)]/10 transition-colors duration-300">
-                  <Tech.icon className="w-7 h-7 text-[var(--color-text)]/90 group-hover:text-[var(--color-accent)] transition-colors duration-300" style={{ fill: "currentColor" }} />
+                  <Tech.icon 
+                    className="w-7 h-7 transition-all duration-300 tech-logo-adaptive" 
+                    style={{ fill: "currentColor" }} 
+                  />
                 </div>
                 <span className="font-semibold text-lg text-[var(--color-text)]/90 group-hover:text-[var(--color-text)] tracking-wide transition-colors duration-300">
                   {Tech.name}
