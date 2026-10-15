@@ -12,8 +12,10 @@ export function Navbar() {
       }`}
     >
 
-      <div className="flex items-center gap-2">
-        <img src="/logo.svg" alt="JC Logo" className="w-10 h-10" />
+      <div className="flex items-center gap-1 font-mono">
+        <span className="text-[var(--color-accent)] text-sm">&lt;dev&gt;</span>
+        <span className="text-[var(--color-text)] font-black text-2xl mx-1">JC</span>
+        <span className="text-[var(--color-accent)] text-sm">&lt;/dev&gt;</span>
       </div>
 
       <div className="flex gap-10 max-sm:hidden items-center">
