@@ -7,7 +7,7 @@ import type { PDFViewerRef } from '@embedpdf/react-pdf-viewer';
 const PDFViewer = lazy(() => import('@embedpdf/react-pdf-viewer').then(module => ({ default: module.PDFViewer })));
 
 export function CVViewerModal({ isOpen, onClose, cvUrl }: CVViewerModalProps) {
-  const viewerRef = useRef<PDFViewerRef>(null);
+  const viewerRef = useRef<PDFViewerRef | null>(null);
   const { theme } = useTheme();
 
   const { disabledCategories } = usePDFViewer(viewerRef, theme);

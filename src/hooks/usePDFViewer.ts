@@ -1,7 +1,7 @@
 import { useEffect, useState, type RefObject } from 'react';
 import type { PDFViewerRef } from '@embedpdf/react-pdf-viewer';
 
-export function usePDFViewer(viewerRef: RefObject<PDFViewerRef>, theme: string) {
+export function usePDFViewer(viewerRef: RefObject<PDFViewerRef | null>, theme: string) {
   const [disabledCategories] = useState<string[]>(['annotation', 'redaction']);
 
   // Actualizar el tema dependiendo dek tema en mi portafolio
@@ -14,18 +14,25 @@ export function usePDFViewer(viewerRef: RefObject<PDFViewerRef>, theme: string) 
     if (!viewerRef.current?.container) return;
 
     const updateCategories = async () => {
-      const registry = await viewerRef.current!.container!.registry;
+      const container = viewerRef.current?.container;
+      if (!container) return;
 
-      const commands = registry
-        .getPlugin('commands')
-        ?.provides();
-      if (commands) {
-        commands.setDisabledCategories(disabledCategories);
+      const registry = await container.registry;
+
+      const commandsPlugin = registry.getPlugin('commands');
+      if (commandsPlugin?.provides) {
+        const commands = commandsPlugin.provides();
+        if (commands?.setDisabledCategories) {
+          commands.setDisabledCategories(disabledCategories);
+        }
       }
 
-      const ui = registry.getPlugin('ui')?.provides();
-      if (ui) {
-        ui.setDisabledCategories(disabledCategories);
+      const uiPlugin = registry.getPlugin('ui');
+      if (uiPlugin?.provides) {
+        const ui = uiPlugin.provides();
+        if (ui?.setDisabledCategories) {
+          ui.setDisabledCategories(disabledCategories);
+        }
       }
     };
 
