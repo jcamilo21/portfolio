@@ -67,15 +67,39 @@ export function AboutSection() {
 
         <div ref={chartRef} className="relative h-[300px] sm:h-96 w-full flex items-center justify-center py-6 sm:pl-10">
           <div className="relative w-full max-w-[280px] sm:max-w-md h-full mx-auto">
-            {/* lLinea que conecta con el chart */}
             <svg className="absolute inset-0 w-full h-full overflow-visible pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: 'var(--color-accent)', stopOpacity: 0.3 }} />
+                  <stop offset="50%" style={{ stopColor: 'var(--color-accent)', stopOpacity: 0.8 }} />
+                  <stop offset="100%" style={{ stopColor: 'var(--color-accent)', stopOpacity: 1 }} />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
               <path 
                 d="M 10 90 C 30 90, 35 50, 50 50 C 65 50, 70 10, 90 10" 
                 fill="none" 
-                className={`${isChartVisible ? 'chart-line-animate' : 'opacity-0'} drop-shadow-md`}
-                stroke="var(--color-accent)"
-                strokeWidth="1.5"
+                className={`${isChartVisible ? 'chart-line-animate' : 'opacity-0'}`}
+                stroke="url(#chartLineGradient)"
+                strokeWidth="2"
                 strokeLinecap="round"
+                filter="url(#glow)"
+              />
+              <path 
+                d="M 10 90 C 30 90, 35 50, 50 50 C 65 50, 70 10, 90 10" 
+                fill="none" 
+                className={`${isChartVisible ? 'chart-line-animate' : 'opacity-0'}`}
+                stroke="var(--color-accent)"
+                strokeWidth="0.5"
+                strokeLinecap="round"
+                opacity="0.3"
+                style={{ animationDelay: '0.1s' }}
               />
             </svg>
 
